@@ -393,3 +393,494 @@ footer span:first-child {
     margin: 0 20px;
   }
 }
+/* =========================================
+   TRACEABILITY PAGE
+   ========================================= */
+
+.tracePage {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(255, 196, 61, 0.13),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(245, 166, 35, 0.1),
+      transparent 25%
+    ),
+    #fffaf0;
+  color: #2b2118;
+}
+
+/* NAVBAR */
+
+.traceNav {
+  height: 82px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0dfbd;
+  background: rgba(255, 250, 240, 0.96);
+}
+
+.traceLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.traceLogoIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #f5b82e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.traceLogo h1 {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.traceLogo p {
+  font-size: 11px;
+  color: #8c7965;
+  margin-top: 2px;
+}
+
+.verifiedBadge {
+  background: #edf8e9;
+  border: 1px solid #c8e4bd;
+  color: #47753a;
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* CONTAINER */
+
+.traceContainer {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 65px 25px 45px;
+}
+
+/* BATCH HEADER */
+
+.batchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.publicTag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #ad7410;
+  background: #fff0c9;
+  padding: 8px 13px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.batchHeader h2 {
+  font-size: 39px;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+.batchHeader h2 span {
+  color: #d99812;
+}
+
+.batchHeader > div:first-child p {
+  color: #766858;
+  font-size: 14px;
+}
+
+/* CERTIFICATE */
+
+.certificate {
+  min-width: 245px;
+  padding: 18px;
+  background: white;
+  border: 1px solid #dcebd5;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(93, 68, 25, 0.07);
+}
+
+.certificateIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #eaf6e5;
+  color: #4e8a3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.certificate strong {
+  display: block;
+  font-size: 12px;
+  color: #45663c;
+}
+
+.certificate small {
+  display: block;
+  color: #9a8a78;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+/* JOURNEY CARD */
+
+.journeyCard {
+  background: white;
+  border: 1px solid #eadfcf;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 18px 50px rgba(93, 68, 25, 0.1);
+}
+
+.journeyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #f0e7d9;
+  margin-bottom: 25px;
+}
+
+.journeyHeader h3 {
+  font-size: 19px;
+}
+
+.journeyHeader p {
+  color: #958675;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.batchStatus {
+  color: #4e8a3e;
+  background: #edf8e9;
+  border: 1px solid #d1e8c9;
+  border-radius: 20px;
+  padding: 7px 12px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+/* TIMELINE */
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 28px;
+  bottom: 28px;
+  width: 2px;
+  background: #eadfcf;
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineIcon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background: #fff1c9;
+  border: 1px solid #f0dca8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  z-index: 1;
+}
+
+.timelineContent {
+  flex: 1;
+  padding: 4px 0 20px;
+  border-bottom: 1px solid #f1e9dd;
+}
+
+.timelineItem:last-child .timelineContent {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.timelineTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.timelineTop h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.timelineTop span {
+  color: #958675;
+  font-size: 10px;
+}
+
+.timelineTop strong {
+  color: #4e8a3e;
+  background: #edf8e9;
+  border-radius: 15px;
+  padding: 6px 10px;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+/* INFORMATION GRID */
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.infoGrid > div,
+.testGrid > div {
+  background: #fffaf3;
+  border: 1px solid #f0e5d5;
+  border-radius: 10px;
+  padding: 11px 13px;
+}
+
+.infoGrid label,
+.testGrid label,
+.hashBox label,
+.detailsGrid label {
+  display: block;
+  color: #a18f7c;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.infoGrid p,
+.testGrid p,
+.hashBox p,
+.detailsGrid p {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* LAB TEST */
+
+.testGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.testGrid p {
+  color: #4e8a3e;
+}
+
+/* BLOCKCHAIN HASH */
+
+.hashBox {
+  background: #f8f5ef;
+  border: 1px dashed #ddcfba;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.hashBox p {
+  color: #735522;
+  font-family: monospace;
+  letter-spacing: 0.5px;
+}
+
+/* PACKAGE */
+
+.packageInfo {
+  background: #edf8e9;
+  border: 1px solid #d5e8ce;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.packageInfo p {
+  color: #527448;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* DETAILS BUTTON */
+
+.detailsButton {
+  display: block;
+  margin: 25px auto 0;
+  background: white;
+  border: 1px solid #dfd2c0;
+  color: #6d5638;
+  padding: 11px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.detailsButton:hover {
+  background: #fff7e7;
+  border-color: #d7b96e;
+}
+
+/* DETAILS CARD */
+
+.detailsCard {
+  margin-top: 15px;
+  background: white;
+  border: 1px solid #eadfcf;
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.detailsCard h3 {
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.detailsGrid > div {
+  background: #fffaf3;
+  border: 1px solid #f0e5d5;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+/* TRUST MESSAGE */
+
+.trustMessage {
+  text-align: center;
+  color: #9a8a78;
+  font-size: 10px;
+  margin-top: 25px;
+}
+
+/* TRACEABILITY FOOTER */
+
+.traceFooter {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 20px 25px 35px;
+  border-top: 1px solid #eadfcf;
+  display: flex;
+  justify-content: space-between;
+  color: #9a8a78;
+  font-size: 11px;
+}
+
+.traceFooter span:first-child {
+  color: #705322;
+  font-weight: 800;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .traceNav {
+    padding: 0 20px;
+  }
+
+  .verifiedBadge {
+    display: none;
+  }
+
+  .traceContainer {
+    padding: 40px 15px;
+  }
+
+  .batchHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .batchHeader h2 {
+    font-size: 30px;
+  }
+
+  .certificate {
+    width: 100%;
+  }
+
+  .journeyCard {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .journeyHeader {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .batchStatus {
+    display: none;
+  }
+
+  .infoGrid,
+  .testGrid,
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineTop {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .timelineTop strong {
+    align-self: flex-start;
+  }
+
+  .traceFooter {
+    margin: 0 15px;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
