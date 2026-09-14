@@ -34,14 +34,19 @@ export default function Home() {
   };
 
   const submitBatch = () => {
-    if (!volume || !flora || !location) {
-      alert("Please fill all fields and capture the GPS location.");
-      return;
-    }
+  if (!volume || !flora || !location) {
+    alert("Please fill all fields and capture the GPS location.");
+    return;
+  }
 
-    // Demo navigation to the public traceability page
-    window.location.href = "/traceability";
-  };
+  // Generate a unique batch ID for this harvest
+  const batchId = `HC-${new Date().getFullYear()}-${Math.floor(
+    100 + Math.random() * 900
+  )}`;
+
+  // Open the traceability page with the generated batch ID
+  window.location.href = `/traceability?batch=${batchId}`;
+};
 
   return (
     <main className="page">
