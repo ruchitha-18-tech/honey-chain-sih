@@ -1,10 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import QRCodeCard from "./QRCodeCard";
 
 export default function TraceabilityPage() {
   const [showDetails, setShowDetails] = useState(false);
+const [batchId, setBatchId] = useState("HC-2026-001");
 
+useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+  const batch = params.get("batch");
+
+  if (batch) {
+    setBatchId(batch);
+  }
+}, []);
   return (
     <main className="tracePage">
       {/* NAVBAR */}
@@ -29,7 +39,7 @@ export default function TraceabilityPage() {
           <div>
             <span className="publicTag">PUBLIC TRACEABILITY</span>
 
-            <h2>Honey Batch <span>#HC-2026-001</span></h2>
+            <h2>Honey Batch <span>#{batchId}</span></h2>
 
             <p>
               Complete journey of this honey batch from hive to consumer.
@@ -192,7 +202,7 @@ export default function TraceabilityPage() {
             <div className="detailsGrid">
               <div>
                 <label>Batch ID</label>
-                <p>HC-2026-001</p>
+                <p>{batchId}</p>
               </div>
 
               <div>
@@ -212,7 +222,7 @@ export default function TraceabilityPage() {
             </div>
           </div>
         )}
-
+        <QRCodeCard batchId={batchId} />
         <div className="trustMessage">
           🔒 This information is provided through the Honey Chain
           traceability system.

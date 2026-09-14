@@ -884,3 +884,69 @@ footer span:first-child {
     gap: 8px;
   }
 }
+/* QR Code Verification */
+
+.qrCard {
+  margin-top: 28px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #eadfcf;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: 0 12px 35px rgba(43, 33, 24, 0.08);
+}
+
+.qrInfo {
+  flex: 1;
+}
+
+.qrTag {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #fff2cf;
+  color: #a66b00;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.qrCard h3 {
+  margin: 14px 0 8px;
+  font-size: 24px;
+  color: #2b2118;
+}
+
+.qrCard p {
+  margin: 0 0 14px;
+  color: #6f6257;
+  line-height: 1.6;
+}
+
+.qrCard small {
+  color: #8a796a;
+  font-weight: 600;
+}
+
+.qrCodeBox {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #eee2d1;
+}
+
+.qrCodeBox svg {
+  display: block;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .qrCard {
+    flex-direction: column;
+    text-align: center;
+  }
+}
