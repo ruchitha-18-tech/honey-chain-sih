@@ -34,19 +34,34 @@ export default function Home() {
   };
 
   const submitBatch = () => {
-  if (!volume || !flora || !location) {
-    alert("Please fill all fields and capture the GPS location.");
-    return;
-  }
+    if (!volume || !flora || !location) {
+      alert("Please fill all fields and capture the GPS location.");
+      return;
+    }
 
-  // Generate a unique batch ID for this harvest
-  const batchId = `HC-${new Date().getFullYear()}-${Math.floor(
-    100 + Math.random() * 900
-  )}`;
+    // Generate unique batch ID
+    const batchId = `HC-${new Date().getFullYear()}-${Math.floor(
+      100 + Math.random() * 900
+    )}`;
 
-  // Open the traceability page with the generated batch ID
-  window.location.href = `/traceability?batch=${batchId}`;
-};
+    // Save entered data
+    const batchData = {
+      batchId,
+      harvestDate: new Date().toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      }),
+      volume,
+      flora,
+      location,
+    };
+
+    localStorage.setItem("honeyBatch", JSON.stringify(batchData));
+
+    // Go to traceability page
+    window.location.href = `/traceability?batch=${batchId}`;
+  };
 
   return (
     <main className="page">
@@ -193,3 +208,6 @@ export default function Home() {
     </main>
   );
 }
+
+
+             
